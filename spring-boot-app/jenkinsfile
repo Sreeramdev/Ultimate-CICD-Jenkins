@@ -9,7 +9,7 @@ pipeline {
     stage('Checkout') {
       steps {
         sh 'echo passed'
-        //git branch: 'main', url: 'https://github.com/sreeramdev/java-app-cicd.git'
+        git branch: 'main', url: 'https://github.com/Sreeramdev/Ultimate-CICD-Jenkins.git'
       }
     }
     stage('Build and Test') {
@@ -46,7 +46,7 @@ pipeline {
     }
     stage('Update Deployment File') {
         environment {
-            GIT_REPO_NAME = "java-app-cicd"
+            GIT_REPO_NAME = "Ultimate-CICD-Jenkins"
             GIT_USER_NAME = "sreeramdev"
         }
         steps {
