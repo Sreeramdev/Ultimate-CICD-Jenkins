@@ -1,21 +1,21 @@
 pipeline {
   agent {
     docker {
-      image 'sreeramdev/ultimate-cicd-pipeline:v1'
+      image 'abhishekf5/maven-abhishek-docker-agent:v1'
       args '--user root -v /var/run/docker.sock:/var/run/docker.sock' 
     }
   }
   stages {
     stage('Checkout') {
       steps {
-        sh 'echo passed'
+        sh 'echo "Checkout stage passed"'
         git branch: 'main', url: 'https://github.com/Sreeramdev/Ultimate-CICD-Jenkins.git'
       }
     }
     stage('Build and Test') {
       steps {
         sh 'ls -ltr'
-        // build the project and create a JAR file
+        // Build the project and create a JAR file
         sh 'cd java-maven-sonar-argocd-helm-k8s/spring-boot-app && mvn clean package'
       }
     }
