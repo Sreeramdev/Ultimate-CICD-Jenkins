@@ -35,4 +35,3 @@ Here comes the main character of our pipeline i.e., Argo CD. It is responsible f
 Step 9 -
 Finally, Argo CD deploys the application on to the kubernetes cluster and application will be running on 2 pods as specified in deployment.yml
 
-java-app-cicd/README.md at main · RachanaVenkat/java-app-cicd
